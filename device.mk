@@ -379,6 +379,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.vndk.current.on_vendor
 
+# ZRAM writeback
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.zram.mark_idle_delay_mins=60 \
+    ro.zram.first_wb_delay_mins=180 \
+    ro.zram.periodic_wb_delay_hours=24
+
 # QTI
 PRODUCT_PACKAGES += \
     libjson \
