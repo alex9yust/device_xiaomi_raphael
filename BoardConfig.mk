@@ -165,7 +165,6 @@ BOARD_USES_METADATA_PARTITION := true
 
 # Partition (Userimages)
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USES_MKE2FS := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
