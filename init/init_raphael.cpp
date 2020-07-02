@@ -41,7 +41,7 @@ using android::base::GetProperty;
 void property_override(char const prop[], char const value[], bool add = true) {
     prop_info* pi;
 
-    pi = (prop_info*) __system_property_find(prop);
+    pi = (prop_info*)__system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
     else if (add)
@@ -52,21 +52,20 @@ void load_dalvikvm_properties() {
     struct sysinfo sys;
 
     sysinfo(&sys);
-    if (sys.totalram < 6144ull * 1024 * 1024) {
-        // from - phone-xhdpi-6144-dalvik-heap.mk
+    if (sys.totalram < 7000ull * 1024 * 1024) {
+        // 4/6GB RAM
         property_override("dalvik.vm.heapstartsize", "16m");
-        property_override("dalvik.vm.heapgrowthlimit", "256m");
-        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heaptargetutilization", "0.5");
         property_override("dalvik.vm.heapmaxfree", "32m");
     } else {
-        // 8GB & 12GB RAM
-        property_override("dalvik.vm.heapstartsize", "32m");
-        property_override("dalvik.vm.heapgrowthlimit", "512m");
-        property_override("dalvik.vm.heapsize", "768m");
-        property_override("dalvik.vm.heapmaxfree", "64m");
+        // 8/12/16GB RAM
+        property_override("dalvik.vm.heapstartsize", "24m");
+        property_override("dalvik.vm.heaptargetutilization", "0.46");
+        property_override("dalvik.vm.heapmaxfree", "48m");
     }
 
-    property_override("dalvik.vm.heaptargetutilization", "0.5");
+    property_override("dalvik.vm.heapgrowthlimit", "256m");
+    property_override("dalvik.vm.heapsize", "512m");
     property_override("dalvik.vm.heapminfree", "8m");
 }
 
