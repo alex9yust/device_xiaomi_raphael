@@ -15,11 +15,13 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libdl \
     libxml2 \
-    libbase \
     libhidlbase \
     libhidltransport \
-    libutils \
     android.hardware.power@1.2
+
+LOCAL_STATIC_LIBRARIES := \
+    libbase \
+    libutils
 
 LOCAL_HEADER_LIBRARIES += \
     libutils_headers \

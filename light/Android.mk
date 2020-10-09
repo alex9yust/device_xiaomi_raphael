@@ -10,12 +10,14 @@ LOCAL_INSTALLED_MODULE_STEM := android.hardware.light@2.0-impl.so
 LOCAL_SRC_FILES := Light.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-        libbase \
-        liblog \
-        libhidlbase \
-        libhidltransport \
-        libhardware \
-        libutils \
-        android.hardware.light@2.0
+    liblog \
+    libhidlbase \
+    libhidltransport \
+    libhardware \
+    android.hardware.light@2.0
+
+LOCAL_STATIC_LIBRARIES := \
+    libbase \
+    libutils
 
 include $(BUILD_SHARED_LIBRARY)
