@@ -153,6 +153,7 @@ PRODUCT_PACKAGES += \
     init.mi_thermald.rc \
     init.qcom.rc \
     init.qcom.usb.sh \
+    init.raphael.wlan.rc \
     apex_metadata.rc
 
 # Input
