@@ -114,14 +114,14 @@ void vendor_load_properties() {
         model = "Redmi K20 Pro";
         device = "raphael";
         fingerprint =
-                "Xiaomi/raphael/raphael:10/QKQ1.190825.002/V12.0.6.0.QFKCNXM:user/release-keys";
-        description = "raphael-user 10 QKQ1.190825.002 V12.0.6.0.QFKCNXM release-keys";
+                "Xiaomi/raphael/raphael:11/RKQ1.200826.002/21.4.12:user/release-keys";
+        description = "raphael-user 11 RKQ1.200826.002 21.4.12 release-keys";
     } else if (region == "INDIA") {
         model = "Redmi K20 Pro";
         device = "raphaelin";
         fingerprint =
-                "Xiaomi/raphaelin/raphaelin:10/QKQ1.190825.002/V12.0.4.0.QFKINXM:user/release-keys";
-        description = "raphaelin-user 10 QKQ1.190825.002 V12.0.4.0.QFKINXM release-keys";
+                "Xiaomi/raphaelin/raphaelin:10/QKQ1.190825.002/V12.0.5.0.QFKINXM:user/release-keys";
+        description = "raphaelin-user 10 QKQ1.190825.002 V12.0.5.0.QFKINXM release-keys";
         mod_device = "raphaelin_in_global";
     }
 
@@ -134,9 +134,6 @@ void vendor_load_properties() {
     }
 
     property_override("ro.boot.hardware.revision", hardware_revision.c_str());
-    property_override("org.evolution.build_donate_url", "https://paypal.me/joeyhuab");
-    property_override("org.evolution.build_maintainer", "Joey Huab");
-    property_override("org.evolution.build_support_url", "https://t.me/EvolutionXRaphael");
     property_override("ro.apex.updatable", "true");
     property_override("ro.oem_unlock_supported", "0");
 
