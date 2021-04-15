@@ -152,7 +152,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.mi_thermald.rc \
     init.qcom.rc \
-    init.qcom.usb.sh
+    init.qcom.usb.sh \
+    apex_metadata.rc
 
 # Input
 PRODUCT_COPY_FILES += \
