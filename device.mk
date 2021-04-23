@@ -44,10 +44,6 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-# AID/fs configs
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 -include $(LOCAL_PATH)/product_prop.mk
