@@ -375,6 +375,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/msmnile/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# VNDK on vendor
+PRODUCT_PACKAGES += \
+    com.android.vndk.current.on_vendor
+
 # QTI
 PRODUCT_PACKAGES += \
     libjson \
