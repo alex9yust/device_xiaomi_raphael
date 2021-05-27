@@ -1,0 +1,6 @@
+# Allow system_server to getpgid app_zygote
+allow system_server app_zygote:process getpgid;
+
+#Smart charging
+allow system_server sysfs_battery_supply:file { getattr open read write };
+allow system_server sysfs_usb_supply:file { getattr open read write };
